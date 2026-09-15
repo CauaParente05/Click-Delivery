@@ -20,20 +20,26 @@ def exibir_opcoes():
     print('3 - Ativar Restaurante')
     print('4 - Sair\n')
 
+def opcao_invalida():
+    print('Opcao invalida')
+
 def escolher_opcao():
-    opcao_escolhida = int(input('Escolha uma opcao: '))
-    
-    match opcao_escolhida:
-        case 1:
-            print('Cadastrar Restaurante')
-        case 2:
-            print('Listar Restaurantes')
-        case 3:
-            print('Ativar Restaurante')
-        case 4:
-            finalizar_app()
-        case _:
-            print('Opcao invalida')
+    try:
+        opcao_escolhida = int(input('Escolha uma opcao: '))
+        
+        match opcao_escolhida:
+            case 1:
+                print('Cadastrar Restaurante')
+            case 2:
+                print('Listar Restaurantes')
+            case 3:
+                print('Ativar Restaurante')
+            case 4:
+                finalizar_app()
+            case _:
+                opcao_invalida()
+    except:
+        opcao_invalida()
 
 
     
