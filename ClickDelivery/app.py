@@ -20,9 +20,10 @@ def voltar_ao_menu():
     input('\nDigite qualquer tecla para voltar ao menu principal: ')
     main()
 
-def limpa_terminal(titulo):
+def exibe_subtitulo(titulo):
     os.system('cls')
-    print(f'{titulo}')
+    print(titulo)
+    print('\n')
    
 def exibir_opcoes(): 
     print('1 - Cadastrar Restaurante')
@@ -36,21 +37,21 @@ def opcao_invalida():
     
     
 def cadastrar_novo_restaurante():
-    limpa_terminal('Cadastro de novos restaurantes\n')
+    exibe_subtitulo('Cadastro de novos restaurantes')
     nome_do_restaurante = input('Digite o nome do restaurante: ')
     restaurantes.append(nome_do_restaurante)
     print(f'O restaurante {nome_do_restaurante} foi cadastrado com sucesso!\n')
     voltar_ao_menu()
 
 def listar_restaurantes():
-    limpa_terminal('Listando restaurantes:\n')
+    exibe_subtitulo('Listando restaurantes: ')
     for restaurante in restaurantes:
         print(f'- {restaurante}')
         
     voltar_ao_menu()
 
 def ativar_restaurante():
-    limpa_terminal('Ativando Restaurante: ')
+    exibe_subtitulo('Ativando Restaurante: ')
     voltar_ao_menu()
 
 def escolher_opcao():
