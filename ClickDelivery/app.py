@@ -44,6 +44,12 @@ def listar_restaurantes():
     input('Digite qualquer tecla para voltar ao menu principal: ')
     main()
 
+def ativar_restaurante():
+    os.system('cls')
+    print('Ativando restaurante:')
+    input('Digite qualquer tecla para voltar ao menu principal: ')
+    main()
+
 def escolher_opcao():
     try:
         opcao_escolhida = int(input('Escolha uma opcao: '))
@@ -54,7 +60,7 @@ def escolher_opcao():
             case 2:
                 listar_restaurantes()
             case 3:
-                print('Ativar Restaurante')
+                ativar_restaurante()
             case 4:
                 finalizar_app()
             case _:
